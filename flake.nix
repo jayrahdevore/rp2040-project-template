@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url = "github:nixos/nixpkgs/nixos-23.11";
+      url = "github:nixos/nixpkgs/nixos-unstable";
     };
     fenix = {
       url = "github:nix-community/fenix";
@@ -72,11 +72,13 @@
         toolchain
         flip-link
         probe-rs
+        elf2uf2-rs
       ];
 
       packages = with pkgs; [
         # idl.packages.${system}.default
         # python-env
+        rust-analyzer
       ];
 
       # shellHook = ''
